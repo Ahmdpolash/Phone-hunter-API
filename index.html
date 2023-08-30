@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+
+
+    <main>
+
+        <section class="px-20 mx-auto">
+            <h1 class="text-center font-bold text-3xl py-4">Search your phone</h1>
+            <!-- search input field -->
+            <div class="bg-gray-400 p-4 rounded-md mb-4 text-center">
+
+                <input id="searchInput" type="text" placeholder="Search your phone"
+                    class="input input-bordered w-full max-w-xs" />
+
+                <!-- search button -->
+                <button onclick="handleSearch()" class="btn btn-primary w-full lg:w-20 md:w-20 mt-2">Search</button>
+            </div>
+
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+              
+                <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+                    <form method="dialog" class="modal-box">
+                        <div id="details-container">
+                            
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+
+
+            <!-- show loading -->
+            <section>
+                <div class="text-center py-6 hidden" id="loading">
+                    <span class="loading loading-dots loading-lg mx-auto"></span>
+                </div>
+            </section>
+
+            <!-- card container -->
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            </div>
+
+            <div onclick="showMoreHandle()" id="show-more" class="hidden text-center my-8">
+                <button class="btn btn-secondary">Show More</button>
+            </div>
+
+
+
+
+        </section>
+
+
+    </main>
+
+
+   <script src="app.js"></script>
+
+</body>
+
+</html>
